@@ -15,70 +15,7 @@ static libusb_device **usb_devs = nullptr;
 static ssize_t n_devices = 0;
 
 
-//////////////////////////////////////////////////////////////////////
-// File Handlers
-//////////////////////////////////////////////////////////////////////
 
-
-static void send_file(string filename, libusb_device_handle *hdev){
-	
-	char *memblock;
-	streampos size;
-	ifstream file;
-	int rc;
-
-	file.open(filename, ios::binary | ios::ate); // pointer at the end of file
-	size = file.tellg(); // returns the address count of the end of file
-
-	if( !file.is_open() ){
-		cout << "Can't open file" << endl;
-		exit(0);
-	}
-
-	file.close();
-	int last_byte;
-	int chunk_size;
-
-	if (size > 512){
-		last_byte = size % 512;
-		chunk_size = 512;
-	}else{
-		chunk_size = size;
-	}
-
-	while ( file.good() ){
-		memblock = new char [chunk_size];
-		file.read(memblock,chunk_size); //each read will move the pointer to the next address
-		rc = bulk_write(hdev,0x02,memblock,chunk_size,10/*ms*/);
-		if ( rc < 0 ) {
-			cout << libusb_strerror(libusb_error(-rc)) << "write bulk to EP 2\n"; 
-			// break;
-		}
-	
-		//bulk_write(memblock)
-		streampos new_size = file.tellg();
-		int rem = (size - new_size);
-		if ((rem < chunk_size) && (rem > 0)){
-			memblock = new char [last_byte];
-			file.read(memblock, last_byte);
-			new_size = file.tellg();
-			rem = size - new_size;
-		}
-		if (rem == 0) break;
-	}
-}
-
-//////////////////////////////////////////////////////////////////////
-// Save File
-//////////////////////////////////////////////////////////////////////
-static void save_file(char *data_buff, streampos size){
-	ofstream file;
-	char *memblock;
-
-	file.open("filename", ios::binary | ios::app);
-	file.write(data_buff, size);
-
-}
 //////////////////////////////////////////////////////////////////////
 // Locate USB device by vendor and product ID
 //////////////////////////////////////////////////////////////////////
@@ -148,13 +85,77 @@ static int bulk_write(libusb_device_handle *hdev, unsigned char endpoint, void *
 }
 
 //////////////////////////////////////////////////////////////////////
+// File Handlers
+//////////////////////////////////////////////////////////////////////
+
+
+static void send_file(string filename, libusb_device_handle *hdev){
+	
+	char *memblock;
+	streampos size;
+	ifstream file;
+	int rc;
+
+	file.open(filename, ios::binary | ios::ate); // pointer at the end of file
+	size = file.tellg(); // returns the address count of the end of file
+
+	if( !file.is_open() ){
+		cout << "Can't open file" << endl;
+		exit(0);
+	}
+
+	file.close();
+	int last_byte;
+	int chunk_size;
+
+	if (size > 512){
+		last_byte = size % 512;
+		chunk_size = 512;
+	}else{
+		chunk_size = size;
+	}
+
+	while ( file.good() ){
+		memblock = new char [chunk_size];
+		file.read(memblock,chunk_size); //each read will move the pointer to the next address
+		rc = bulk_write(hdev,0x02,memblock,chunk_size,10/*ms*/);
+		if ( rc < 0 ) {
+			cout << libusb_strerror(libusb_error(-rc)) << "write bulk to EP 2\n"; 
+			// break;
+		}
+	
+		//bulk_write(memblock)
+		streampos new_size = file.tellg();
+		cout << "Wrote " << new_size << "bytes" << endl;
+		int rem = (size - new_size);
+		if ((rem < chunk_size) && (rem > 0)){
+			memblock = new char [last_byte];
+			file.read(memblock, last_byte);
+			new_size = file.tellg();
+			cout << "Wrote " << new_size << "bytes" << endl;
+			rem = size - new_size;
+		}
+		if (rem == 0) break;
+	}
+}
+
+//////////////////////////////////////////////////////////////////////
+// Save File
+//////////////////////////////////////////////////////////////////////
+static void save_file(char *data_buff, streampos size){
+	ofstream file;
+
+	file.open("filename", ios::binary | ios::app);
+	file.write(data_buff, size);
+
+}
+//////////////////////////////////////////////////////////////////////
 // Main program:
 //////////////////////////////////////////////////////////////////////
 
 int
 main(int argc,char **argv) {
-	int rc, ch;
-	char buf[513];
+	int rc;
 	unsigned id_vendor = 0x04b4, id_product = 0x4718;
 	libusb_device_handle *hdev;
 
@@ -182,12 +183,10 @@ main(int argc,char **argv) {
 		return 3;
 	}*/
 	send_file("r1.jpg", hdev);
-	char *memblock;
 	if ( rc < 0 ) {
 		cout << libusb_strerror(libusb_error(-rc)) << "write bulk to EP 2\n"; 
 		// break;
 	}
-	cout << "Wrote " << size << "bytes" << endl;
 
 	rc = libusb_release_interface(hdev,0);
 	assert(!rc);
