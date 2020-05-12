@@ -8,4 +8,4 @@
 *.map
 *.mem
 #vscode
-.vscode
+*.vscode
