@@ -1,0 +1,13 @@
+# Compiles
+*.lst
+*.asm
+*.rst
+*.rel
+*.sym
+*.lk
+*.map
+*.mem
+*.o
+*.ihx
+#vscode
+*.vscode
