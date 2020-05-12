@@ -100,7 +100,7 @@ main(void) {
 	for (;;) {
 		if ( !(EP2CS & bmEPEMPTY) )
 			accept_cmd();	// Have data in EP2
-l
+
 		if ( !(EP6CS & bmEPFULL) )
 			send_state();	// EP6 is not full
 	}
