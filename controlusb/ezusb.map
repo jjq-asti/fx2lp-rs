@@ -1,0 +1,655 @@
+ASxxxx Linker V03.00 + NoICE + sdld,  page 1.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CABS                                00000000    00000000 =           0. bytes (ABS,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000000  l_BIT_BANK                      
+C:   00000000  l_BSEG                          
+C:   00000000  l_BSEG_BYTES                    
+C:   00000000  l_CABS                          
+C:   00000000  l_GSINIT                        
+C:   00000000  l_GSINIT1                       
+C:   00000000  l_GSINIT5                       
+C:   00000000  l_IABS                          
+C:   00000000  l_ISEG                          
+C:   00000000  l_PSEG                          
+C:   00000000  l_REG_BANK_1                    
+C:   00000000  l_REG_BANK_2                    
+C:   00000000  l_REG_BANK_3                    
+C:   00000000  l_RSEG                          
+C:   00000000  l_RSEG0                         
+C:   00000000  l_RSEG1                         
+C:   00000000  l_XABS                          
+C:   00000000  l_XINIT                         
+C:   00000000  l_XISEG                         
+C:   00000000  l_XSEG                          
+C:   00000000  l__CODE                         
+C:   00000000  s_BSEG                          
+C:   00000000  s_CABS                          
+C:   00000000  s_DSEG                          
+C:   00000000  s_HOME                          
+C:   00000000  s_IABS                          
+C:   00000000  s_ISEG                          
+C:   00000000  s_PSEG                          
+C:   00000000  s_REG_BANK_0                    
+C:   00000000  s_RSEG                          
+C:   00000000  s_RSEG0                         
+C:   00000000  s_RSEG1                         
+C:   00000000  s_XABS                          
+C:   00000000  s_XISEG                         
+C:   00000000  s_XSEG                          
+C:   00000003  l_GSFINAL                       
+C:   00000003  l_GSINIT0                       
+C:   00000003  l_OSEG                          
+C:   00000006  l_HOME                          
+C:   00000006  s_GSINIT0                       
+C:   00000008  l_REG_BANK_0                    
+C:   00000008  s_OSEG                          
+C:   00000008  s_REG_BANK_1                    
+C:   00000009  s_GSINIT1                       
+C:   00000009  s_GSINIT2                       
+C:   0000000A  l_GSINIT2                       
+C:   0000000B  s_SSEG                          
+C:   00000010  s_REG_BANK_2                    
+C:   00000013  s_GSINIT3                       
+C:   00000018  l_CONST                         
+ASxxxx Linker V03.00 + NoICE + sdld,  page 2.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CABS                                00000000    00000000 =           0. bytes (ABS,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000018  s_BIT_BANK                      
+C:   00000018  s_REG_BANK_3                    
+C:   00000020  s_BSEG_BYTES                    
+C:   00000020  s__CODE                         
+C:   00000022  l_GSINIT3                       
+C:   0000002A  l_GSINIT4                       
+C:   00000035  s_GSINIT4                       
+C:   00000040  l_SSEG                          
+C:   0000004B  l_DSEG                          
+C:   0000005F  s_GSFINAL                       
+C:   0000005F  s_GSINIT                        
+C:   0000005F  s_GSINIT5                       
+C:   00000062  s_CSEG                          
+C:   00000100  l_IRAM                          
+C:   00000184  l_CSEG                          
+C:   000001E6  s_CONST                         
+C:   000001FE  s_XINIT                         
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 3.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     00000000  .__.ABS.                           _startup
+     00000080  _IOA                               ezusb
+     00000080  _PA0                               ezusb
+     00000081  _PA1                               ezusb
+     00000081  _SP                                ezusb
+     00000082  _DPL                               ezusb
+     00000082  _PA2                               ezusb
+     00000083  _DPH                               ezusb
+     00000083  _PA3                               ezusb
+     00000084  _DPL1                              ezusb
+     00000084  _PA4                               ezusb
+     00000085  _DPH1                              ezusb
+     00000085  _PA5                               ezusb
+     00000086  _DPS                               ezusb
+     00000086  _PA6                               ezusb
+     00000087  _PA7                               ezusb
+     00000087  _PCON                              ezusb
+     00000088  _IT0                               ezusb
+     00000088  _TCON                              ezusb
+     00000089  _IE0                               ezusb
+     00000089  _TMOD                              ezusb
+     0000008A  _IT1                               ezusb
+     0000008A  _TL0                               ezusb
+     0000008B  _IE1                               ezusb
+     0000008B  _TL1                               ezusb
+     0000008C  _TH0                               ezusb
+     0000008C  _TR0                               ezusb
+     0000008D  _TF0                               ezusb
+     0000008D  _TH1                               ezusb
+     0000008E  _CKCON                             ezusb
+     0000008E  _TR1                               ezusb
+     0000008F  _SPC_FNC                           ezusb
+     0000008F  _TF1                               ezusb
+     00000090  _IOB                               ezusb
+     00000090  _PB0                               ezusb
+     00000091  _EXIF                              ezusb
+     00000091  _PB1                               ezusb
+     00000092  _MPAGE                             ezusb
+     00000092  _PB2                               ezusb
+     00000093  _PB3                               ezusb
+     00000094  _PB4                               ezusb
+     00000095  _PB5                               ezusb
+     00000096  _PB6                               ezusb
+     00000097  _PB7                               ezusb
+     00000098  _RI                                ezusb
+     00000098  _SCON0                             ezusb
+     00000099  _SBUF0                             ezusb
+     00000099  _TI                                ezusb
+     0000009A  _AUTOPTRH1                         ezusb
+     0000009A  _RB8                               ezusb
+ASxxxx Linker V03.00 + NoICE + sdld,  page 4.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     0000009B  _AUTOPTRL1                         ezusb
+     0000009B  _TB8                               ezusb
+     0000009C  _REN                               ezusb
+     0000009D  _AUTOPTRH2                         ezusb
+     0000009D  _SM2                               ezusb
+     0000009E  _AUTOPTRL2                         ezusb
+     0000009E  _SM1                               ezusb
+     0000009F  _SM0                               ezusb
+     000000A0  _IOC                               ezusb
+     000000A0  _PC0                               ezusb
+     000000A0  __XPAGE                            
+     000000A1  _INT2CLR                           ezusb
+     000000A1  _PC1                               ezusb
+     000000A2  _INT4CLR                           ezusb
+     000000A2  _PC2                               ezusb
+     000000A3  _PC3                               ezusb
+     000000A4  _PC4                               ezusb
+     000000A5  _PC5                               ezusb
+     000000A6  _PC6                               ezusb
+     000000A7  _PC7                               ezusb
+     000000A8  _EX0                               ezusb
+     000000A8  _IE                                ezusb
+     000000A9  _ET0                               ezusb
+     000000AA  _EP2468STAT                        ezusb
+     000000AA  _EX1                               ezusb
+     000000AB  _EP24FIFOFLGS                      ezusb
+     000000AB  _ET1                               ezusb
+     000000AC  _EP68FIFOFLGS                      ezusb
+     000000AC  _ES0                               ezusb
+     000000AD  _ET2                               ezusb
+     000000AE  _ES1                               ezusb
+     000000AF  _AUTOPTRSETUP                      ezusb
+     000000AF  _EA                                ezusb
+     000000B0  _IOD                               ezusb
+     000000B0  _PD0                               ezusb
+     000000B1  _IOE                               ezusb
+     000000B1  _PD1                               ezusb
+     000000B2  _OEA                               ezusb
+     000000B2  _PD2                               ezusb
+     000000B3  _OEB                               ezusb
+     000000B3  _PD3                               ezusb
+     000000B4  _OEC                               ezusb
+     000000B4  _PD4                               ezusb
+     000000B5  _OED                               ezusb
+     000000B5  _PD5                               ezusb
+     000000B6  _OEE                               ezusb
+     000000B6  _PD6                               ezusb
+     000000B7  _PD7                               ezusb
+     000000B8  _IP                                ezusb
+     000000B8  _PX0                               ezusb
+     000000B9  _PT0                               ezusb
+ASxxxx Linker V03.00 + NoICE + sdld,  page 5.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     000000BA  _EP01STAT                          ezusb
+     000000BA  _PX1                               ezusb
+     000000BB  _GPIFTRIG                          ezusb
+     000000BB  _PT1                               ezusb
+     000000BC  _PS0                               ezusb
+     000000BD  _GPIFSGLDATH                       ezusb
+     000000BD  _PT2                               ezusb
+     000000BE  _GPIFSGLDATLX                      ezusb
+     000000BE  _PS1                               ezusb
+     000000BF  _GPIFSGLDATLNOX                    ezusb
+     000000C0  _RI1                               ezusb
+     000000C0  _SCON1                             ezusb
+     000000C1  _SBUF1                             ezusb
+     000000C1  _TI1                               ezusb
+     000000C2  _RB81                              ezusb
+     000000C3  _TB81                              ezusb
+     000000C4  _REN1                              ezusb
+     000000C5  _SM21                              ezusb
+     000000C6  _SM11                              ezusb
+     000000C7  _SM01                              ezusb
+     000000C8  _CP_RL2                            ezusb
+     000000C8  _T2CON                             ezusb
+     000000C9  _C_T2                              ezusb
+     000000CA  _RCAP2L                            ezusb
+     000000CA  _TR2                               ezusb
+     000000CB  _EXEN2                             ezusb
+     000000CB  _RCAP2H                            ezusb
+     000000CC  _TCLK                              ezusb
+     000000CC  _TL2                               ezusb
+     000000CD  _RCLK                              ezusb
+     000000CD  _TH2                               ezusb
+     000000CE  _EXF2                              ezusb
+     000000CF  _TF2                               ezusb
+     000000D0  _P                                 ezusb
+     000000D0  _PSW                               ezusb
+     000000D1  _FL                                ezusb
+     000000D2  _OV                                ezusb
+     000000D3  _RS0                               ezusb
+     000000D4  _RS1                               ezusb
+     000000D5  _F0                                ezusb
+     000000D6  _AC                                ezusb
+     000000D7  _CY                                ezusb
+     000000D8  _EICON                             ezusb
+     000000DB  _INT6                              ezusb
+     000000DC  _RESI                              ezusb
+     000000DD  _ERESI                             ezusb
+     000000DF  _SMOD1                             ezusb
+     000000E0  _ACC                               ezusb
+     000000E8  _EIE                               ezusb
+     000000E8  _EUSB                              ezusb
+     000000E9  _EI2C                              ezusb
+ASxxxx Linker V03.00 + NoICE + sdld,  page 6.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     000000EA  _EIEX4                             ezusb
+     000000EB  _EIEX5                             ezusb
+     000000EC  _EIEX6                             ezusb
+     000000F0  _B                                 ezusb
+     000000F5  _B_5                               _gptrget
+     000000F6  _B_6                               _gptrget
+     000000F7  _B_7                               _gptrget
+     000000F8  _EIP                               ezusb
+     000000F8  _PUSB                              ezusb
+     000000F9  _PI2C                              ezusb
+     000000FA  _EIPX4                             ezusb
+     000000FB  _EIPX5                             ezusb
+     000000FC  _EIPX6                             ezusb
+     0000E400  _GPIF_WAVE_DATA                    ezusb
+     0000E480  _RES_WAVEDATA_END                  ezusb
+     0000E50D  _GPCR2                             ezusb
+     0000E600  _CPUCS                             ezusb
+     0000E601  _IFCONFIG                          ezusb
+     0000E602  _PINFLAGSAB                        ezusb
+     0000E603  _PINFLAGSCD                        ezusb
+     0000E604  _FIFORESET                         ezusb
+     0000E605  _BREAKPT                           ezusb
+     0000E606  _BPADDRH                           ezusb
+     0000E607  _BPADDRL                           ezusb
+     0000E608  _UART230                           ezusb
+     0000E609  _FIFOPINPOLAR                      ezusb
+     0000E60A  _REVID                             ezusb
+     0000E60B  _REVCTL                            ezusb
+     0000E60C  _GPIFHOLDAMOUNT                    ezusb
+     0000E610  _EP1OUTCFG                         ezusb
+     0000E611  _EP1INCFG                          ezusb
+     0000E612  _EP2CFG                            ezusb
+     0000E613  _EP4CFG                            ezusb
+     0000E614  _EP6CFG                            ezusb
+     0000E615  _EP8CFG                            ezusb
+     0000E618  _EP2FIFOCFG                        ezusb
+     0000E619  _EP4FIFOCFG                        ezusb
+     0000E61A  _EP6FIFOCFG                        ezusb
+     0000E61B  _EP8FIFOCFG                        ezusb
+     0000E620  _EP2AUTOINLENH                     ezusb
+     0000E621  _EP2AUTOINLENL                     ezusb
+     0000E622  _EP4AUTOINLENH                     ezusb
+     0000E623  _EP4AUTOINLENL                     ezusb
+     0000E624  _EP6AUTOINLENH                     ezusb
+     0000E625  _EP6AUTOINLENL                     ezusb
+     0000E626  _EP8AUTOINLENH                     ezusb
+     0000E627  _EP8AUTOINLENL                     ezusb
+     0000E628  _ECCCFG                            ezusb
+     0000E629  _ECCRESET                          ezusb
+     0000E62A  _ECC1B0                            ezusb
+     0000E62B  _ECC1B1                            ezusb
+ASxxxx Linker V03.00 + NoICE + sdld,  page 7.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     0000E62C  _ECC1B2                            ezusb
+     0000E62D  _ECC2B0                            ezusb
+     0000E62E  _ECC2B1                            ezusb
+     0000E62F  _ECC2B2                            ezusb
+     0000E630  _EP2FIFOPFH                        ezusb
+     0000E631  _EP2FIFOPFL                        ezusb
+     0000E632  _EP4FIFOPFH                        ezusb
+     0000E633  _EP4FIFOPFL                        ezusb
+     0000E634  _EP6FIFOPFH                        ezusb
+     0000E635  _EP6FIFOPFL                        ezusb
+     0000E636  _EP8FIFOPFH                        ezusb
+     0000E637  _EP8FIFOPFL                        ezusb
+     0000E640  _EP2ISOINPKTS                      ezusb
+     0000E641  _EP4ISOINPKTS                      ezusb
+     0000E642  _EP6ISOINPKTS                      ezusb
+     0000E643  _EP8ISOINPKTS                      ezusb
+     0000E648  _INPKTEND                          ezusb
+     0000E649  _OUTPKTEND                         ezusb
+     0000E650  _EP2FIFOIE                         ezusb
+     0000E651  _EP2FIFOIRQ                        ezusb
+     0000E652  _EP4FIFOIE                         ezusb
+     0000E653  _EP4FIFOIRQ                        ezusb
+     0000E654  _EP6FIFOIE                         ezusb
+     0000E655  _EP6FIFOIRQ                        ezusb
+     0000E656  _EP8FIFOIE                         ezusb
+     0000E657  _EP8FIFOIRQ                        ezusb
+     0000E658  _IBNIE                             ezusb
+     0000E659  _IBNIRQ                            ezusb
+     0000E65A  _NAKIE                             ezusb
+     0000E65B  _NAKIRQ                            ezusb
+     0000E65C  _USBIE                             ezusb
+     0000E65D  _USBIRQ                            ezusb
+     0000E65E  _EPIE                              ezusb
+     0000E65F  _EPIRQ                             ezusb
+     0000E660  _GPIFIE                            ezusb
+     0000E661  _GPIFIRQ                           ezusb
+     0000E662  _USBERRIE                          ezusb
+     0000E663  _USBERRIRQ                         ezusb
+     0000E664  _ERRCNTLIM                         ezusb
+     0000E665  _CLRERRCNT                         ezusb
+     0000E666  _INT2IVEC                          ezusb
+     0000E667  _INT4IVEC                          ezusb
+     0000E668  _INTSETUP                          ezusb
+     0000E670  _PORTACFG                          ezusb
+     0000E671  _PORTCCFG                          ezusb
+     0000E672  _PORTECFG                          ezusb
+     0000E678  _I2CS                              ezusb
+     0000E679  _I2DAT                             ezusb
+     0000E67A  _I2CTL                             ezusb
+     0000E67B  _XAUTODAT1                         ezusb
+     0000E67C  _XAUTODAT2                         ezusb
+ASxxxx Linker V03.00 + NoICE + sdld,  page 8.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     0000E67D  _UDMACRCH                          ezusb
+     0000E67E  _UDMACRCL                          ezusb
+     0000E67F  _UDMACRCQUAL                       ezusb
+     0000E680  _USBCS                             ezusb
+     0000E681  _SUSPEND                           ezusb
+     0000E682  _WAKEUPCS                          ezusb
+     0000E683  _TOGCTL                            ezusb
+     0000E684  _USBFRAMEH                         ezusb
+     0000E685  _USBFRAMEL                         ezusb
+     0000E686  _MICROFRAME                        ezusb
+     0000E687  _FNADDR                            ezusb
+     0000E68A  _EP0BCH                            ezusb
+     0000E68B  _EP0BCL                            ezusb
+     0000E68D  _EP1OUTBC                          ezusb
+     0000E68F  _EP1INBC                           ezusb
+     0000E690  _EP2BCH                            ezusb
+     0000E691  _EP2BCL                            ezusb
+     0000E694  _EP4BCH                            ezusb
+     0000E695  _EP4BCL                            ezusb
+     0000E698  _EP6BCH                            ezusb
+     0000E699  _EP6BCL                            ezusb
+     0000E69C  _EP8BCH                            ezusb
+     0000E69D  _EP8BCL                            ezusb
+     0000E6A0  _EP0CS                             ezusb
+     0000E6A1  _EP1OUTCS                          ezusb
+     0000E6A2  _EP1INCS                           ezusb
+     0000E6A3  _EP2CS                             ezusb
+     0000E6A4  _EP4CS                             ezusb
+     0000E6A5  _EP6CS                             ezusb
+     0000E6A6  _EP8CS                             ezusb
+     0000E6A7  _EP2FIFOFLGS                       ezusb
+     0000E6A8  _EP4FIFOFLGS                       ezusb
+     0000E6A9  _EP6FIFOFLGS                       ezusb
+     0000E6AA  _EP8FIFOFLGS                       ezusb
+     0000E6AB  _EP2FIFOBCH                        ezusb
+     0000E6AC  _EP2FIFOBCL                        ezusb
+     0000E6AD  _EP4FIFOBCH                        ezusb
+     0000E6AE  _EP4FIFOBCL                        ezusb
+     0000E6AF  _EP6FIFOBCH                        ezusb
+     0000E6B0  _EP6FIFOBCL                        ezusb
+     0000E6B1  _EP8FIFOBCH                        ezusb
+     0000E6B2  _EP8FIFOBCL                        ezusb
+     0000E6B3  _SUDPTRH                           ezusb
+     0000E6B4  _SUDPTRL                           ezusb
+     0000E6B5  _SUDPTRCTL                         ezusb
+     0000E6B8  _SETUPDAT                          ezusb
+     0000E6C0  _GPIFWFSELECT                      ezusb
+     0000E6C1  _GPIFIDLECS                        ezusb
+     0000E6C2  _GPIFIDLECTL                       ezusb
+     0000E6C3  _GPIFCTLCFG                        ezusb
+     0000E6C4  _GPIFADRH                          ezusb
+ASxxxx Linker V03.00 + NoICE + sdld,  page 9.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     0000E6C5  _GPIFADRL                          ezusb
+     0000E6C6  _FLOWSTATE                         ezusb
+     0000E6C7  _FLOWLOGIC                         ezusb
+     0000E6C8  _FLOWEQ0CTL                        ezusb
+     0000E6C9  _FLOWEQ1CTL                        ezusb
+     0000E6CA  _FLOWHOLDOFF                       ezusb
+     0000E6CB  _FLOWSTB                           ezusb
+     0000E6CC  _FLOWSTBEDGE                       ezusb
+     0000E6CD  _FLOWSTBHPERIOD                    ezusb
+     0000E6CE  _GPIFTCB3                          ezusb
+     0000E6CF  _GPIFTCB2                          ezusb
+     0000E6D0  _GPIFTCB1                          ezusb
+     0000E6D1  _GPIFTCB0                          ezusb
+     0000E6D2  _EP2GPIFFLGSEL                     ezusb
+     0000E6D3  _EP2GPIFPFSTOP                     ezusb
+     0000E6D4  _EP2GPIFTRIG                       ezusb
+     0000E6DA  _EP4GPIFFLGSEL                     ezusb
+     0000E6DB  _EP4GPIFPFSTOP                     ezusb
+     0000E6DC  _EP4GPIFTRIG                       ezusb
+     0000E6E2  _EP6GPIFFLGSEL                     ezusb
+     0000E6E3  _EP6GPIFPFSTOP                     ezusb
+     0000E6E4  _EP6GPIFTRIG                       ezusb
+     0000E6EA  _EP8GPIFFLGSEL                     ezusb
+     0000E6EB  _EP8GPIFPFSTOP                     ezusb
+     0000E6EC  _EP8GPIFTRIG                       ezusb
+     0000E6F0  _XGPIFSGLDATH                      ezusb
+     0000E6F1  _XGPIFSGLDATLX                     ezusb
+     0000E6F2  _XGPIFSGLDATLNOX                   ezusb
+     0000E6F3  _GPIFREADYCFG                      ezusb
+     0000E6F4  _GPIFREADYSTAT                     ezusb
+     0000E6F5  _GPIFABORT                         ezusb
+     0000E6F8  _DBUG                              ezusb
+     0000E6F9  _TESTCFG                           ezusb
+     0000E6FA  _USBTEST                           ezusb
+     0000E6FB  _CT1                               ezusb
+     0000E6FC  _CT2                               ezusb
+     0000E6FD  _CT3                               ezusb
+     0000E6FE  _CT4                               ezusb
+     0000E740  _EP0BUF                            ezusb
+     0000E780  _EP1OUTBUF                         ezusb
+     0000E7C0  _EP1INBUF                          ezusb
+     0000F000  _EP2FIFOBUF                        ezusb
+     0000F400  _EP4FIFOBUF                        ezusb
+     0000F800  _EP6FIFOBUF                        ezusb
+     0000FC00  _EP8FIFOBUF                        ezusb
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 10.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+REG_BANK_0                          00000000    00000008 =           8. bytes (REL,OVR)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V03.00 + NoICE + sdld,  page 11.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+DSEG                                00000000    0000004B =          75. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V03.00 + NoICE + sdld,  page 12.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+OSEG                                00000008    00000003 =           3. bytes (REL,OVR)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V03.00 + NoICE + sdld,  page 13.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+SSEG                                0000000B    00000040 =          64. bytes (REL,OVR)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     0000000B  __start__stack                     ezusb
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 14.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+HOME                                00000000    00000006 =           6. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000003  __sdcc_program_startup             ezusb
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 15.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT0                             00000006    00000003 =           3. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000006  __sdcc_gsinit_startup              
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 16.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT2                             00000009    0000000A =          10. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V03.00 + NoICE + sdld,  page 17.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT3                             00000013    00000022 =          34. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000013  __mcs51_genXINIT                   
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 18.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT4                             00000035    0000002A =          42. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000035  __mcs51_genRAMCLEAR                
+C:   0000003B  __mcs51_genXRAMCLEAR               
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 19.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSFINAL                             0000005F    00000003 =           3. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V03.00 + NoICE + sdld,  page 20.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                00000062    00000184 =         388. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   000001A6  _main                              ezusb
+C:   000001C6  __gptrget                          _gptrget
+C:   000001E2  __sdcc_external_startup            _startup
+ASxxxx Linker V03.00 + NoICE + sdld,  page 21.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CONST                               000001E6    00000018 =          24. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V03.00 + NoICE + sdld,  page 22.
+
+Files Linked                              [ module(s) ]
+
+ezusb.rel                                 [  ]
+
+
+Libraries Linked                          [ object file ]
+
+/usr/local/bin/../share/sdcc/lib/small/mcs51.lib
+                                          [ crtclear.rel ]
+/usr/local/bin/../share/sdcc/lib/small/mcs51.lib
+                                          [ crtxinit.rel ]
+/usr/local/bin/../share/sdcc/lib/small/mcs51.lib
+                                          [ crtxclear.rel ]
+/usr/local/bin/../share/sdcc/lib/small/mcs51.lib
+                                          [ crtpagesfr.rel ]
+/usr/local/bin/../share/sdcc/lib/small/mcs51.lib
+                                          [ crtstart.rel ]
+/usr/local/bin/../share/sdcc/lib/small/libsdcc.lib
+                                          [ _gptrget.rel ]
+/usr/local/bin/../share/sdcc/lib/small/libsdcc.lib
+                                          [ _startup.rel ]
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 23.
+
+User Base Address Definitions
+
+HOME = 0x0000
+ISEG = 0x0000
+BSEG = 0x0000
+
+

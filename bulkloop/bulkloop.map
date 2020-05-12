@@ -1,0 +1,738 @@
+ASxxxx Linker V03.00 + NoICE + sdld,  page 1.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CABS                                00000000    00000000 =           0. bytes (ABS,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000000  _DR_ClearFeature                
+C:   00000000  _DR_GetConfiguration            
+C:   00000000  _DR_GetDescriptor               
+C:   00000000  _DR_GetInterface                
+C:   00000000  _DR_GetStatus                   
+C:   00000000  _DR_SetConfiguration            
+C:   00000000  _DR_SetFeature                  
+C:   00000000  _DR_SetInterface                
+C:   00000000  _DR_VendorCmnd                  
+C:   00000000  _DeviceDscr                     
+C:   00000000  _DeviceQualDscr                 
+C:   00000000  _EZUSB_Discon                   
+C:   00000000  _EZUSB_Discon_PARM_1            
+C:   00000000  _EZUSB_GetStringDscr            
+C:   00000000  _EZUSB_Resume                   
+C:   00000000  _EZUSB_Susp                     
+C:   00000000  _FullSpeedConfigDscr            
+C:   00000000  _HighSpeedConfigDscr            
+C:   00000000  _StringDscr                     
+C:   00000000  _TD_Init                        
+C:   00000000  _TD_Poll                        
+C:   00000000  _TD_Resume                      
+C:   00000000  _TD_Suspend                     
+C:   00000000  _UserDscr                       
+C:   00000000  l_BIT_BANK                      
+C:   00000000  l_CABS                          
+C:   00000000  l_GSINIT                        
+C:   00000000  l_GSINIT1                       
+C:   00000000  l_GSINIT5                       
+C:   00000000  l_IABS                          
+C:   00000000  l_ISEG                          
+C:   00000000  l_OSEG                          
+C:   00000000  l_PSEG                          
+C:   00000000  l_REG_BANK_1                    
+C:   00000000  l_REG_BANK_2                    
+C:   00000000  l_REG_BANK_3                    
+C:   00000000  l_RSEG                          
+C:   00000000  l_RSEG0                         
+C:   00000000  l_RSEG1                         
+C:   00000000  l_XABS                          
+C:   00000000  l_XINIT                         
+C:   00000000  l_XISEG                         
+C:   00000000  l_XSEG                          
+C:   00000000  l__CODE                         
+C:   00000000  s_BSEG                          
+C:   00000000  s_CABS                          
+C:   00000000  s_DSEG                          
+C:   00000000  s_HOME                          
+C:   00000000  s_IABS                          
+C:   00000000  s_ISEG                          
+ASxxxx Linker V03.00 + NoICE + sdld,  page 2.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CABS                                00000000    00000000 =           0. bytes (ABS,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000000  s_REG_BANK_0                    
+C:   00000000  s_RSEG                          
+C:   00000000  s_RSEG0                         
+C:   00000000  s_RSEG1                         
+C:   00000000  s_XABS                          
+C:   00000001  l_BSEG_BYTES                    
+C:   00000001  s_PSEG                          
+C:   00000001  s_XISEG                         
+C:   00000001  s_XSEG                          
+C:   00000003  l_BSEG                          
+C:   00000003  l_GSFINAL                       
+C:   00000003  l_GSINIT0                       
+C:   00000008  l_REG_BANK_0                    
+C:   00000008  s_REG_BANK_1                    
+C:   0000000A  l_CONST                         
+C:   0000000A  l_GSINIT2                       
+C:   00000010  s_REG_BANK_2                    
+C:   00000018  s_BIT_BANK                      
+C:   00000018  s_OSEG                          
+C:   00000018  s_REG_BANK_3                    
+C:   00000020  s_BSEG_BYTES                    
+C:   00000020  s__CODE                         
+C:   00000021  s_SSEG                          
+C:   00000022  l_GSINIT3                       
+C:   0000002A  l_GSINIT4                       
+C:   00000039  l_HOME                          
+C:   00000039  s_GSINIT0                       
+C:   0000003C  s_GSINIT1                       
+C:   0000003C  s_GSINIT2                       
+C:   00000046  s_GSINIT3                       
+C:   00000068  s_GSINIT4                       
+C:   0000007D  l_DSEG                          
+C:   00000092  s_GSFINAL                       
+C:   00000092  s_GSINIT                        
+C:   00000092  s_GSINIT5                       
+C:   00000095  s_CSEG                          
+C:   000000DF  l_SSEG                          
+C:   00000100  l_IRAM                          
+C:   000004DE  l_CSEG                          
+C:   00000573  s_CONST                         
+C:   0000057D  s_XINIT                         
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 3.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     00000000  .__.ABS.                           _startup
+     00000080  _IOA                               fw
+     00000080  _PA0                               fw
+     00000081  _PA1                               fw
+     00000081  _SP                                fw
+     00000082  _DPL                               fw
+     00000082  _PA2                               fw
+     00000083  _DPH                               fw
+     00000083  _PA3                               fw
+     00000084  _DPL1                              fw
+     00000084  _PA4                               fw
+     00000085  _DPH1                              fw
+     00000085  _PA5                               fw
+     00000086  _DPS                               fw
+     00000086  _PA6                               fw
+     00000087  _PA7                               fw
+     00000087  _PCON                              fw
+     00000088  _IT0                               fw
+     00000088  _TCON                              fw
+     00000089  _IE0                               fw
+     00000089  _TMOD                              fw
+     0000008A  _IT1                               fw
+     0000008A  _TL0                               fw
+     0000008B  _IE1                               fw
+     0000008B  _TL1                               fw
+     0000008C  _TH0                               fw
+     0000008C  _TR0                               fw
+     0000008D  _TF0                               fw
+     0000008D  _TH1                               fw
+     0000008E  _CKCON                             fw
+     0000008E  _TR1                               fw
+     0000008F  _SPC_FNC                           fw
+     0000008F  _TF1                               fw
+     00000090  _IOB                               fw
+     00000090  _PB0                               fw
+     00000091  _EXIF                              fw
+     00000091  _PB1                               fw
+     00000092  _MPAGE                             fw
+     00000092  _PB2                               fw
+     00000093  _PB3                               fw
+     00000094  _PB4                               fw
+     00000095  _PB5                               fw
+     00000096  _PB6                               fw
+     00000097  _PB7                               fw
+     00000098  _RI                                fw
+     00000098  _SCON0                             fw
+     00000099  _SBUF0                             fw
+     00000099  _TI                                fw
+     0000009A  _AUTOPTRH1                         fw
+     0000009A  _RB8                               fw
+ASxxxx Linker V03.00 + NoICE + sdld,  page 4.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     0000009B  _AUTOPTRL1                         fw
+     0000009B  _TB8                               fw
+     0000009C  _REN                               fw
+     0000009D  _AUTOPTRH2                         fw
+     0000009D  _SM2                               fw
+     0000009E  _AUTOPTRL2                         fw
+     0000009E  _SM1                               fw
+     0000009F  _SM0                               fw
+     000000A0  _IOC                               fw
+     000000A0  _PC0                               fw
+     000000A0  __XPAGE                            
+     000000A1  _INT2CLR                           fw
+     000000A1  _PC1                               fw
+     000000A2  _INT4CLR                           fw
+     000000A2  _PC2                               fw
+     000000A3  _PC3                               fw
+     000000A4  _PC4                               fw
+     000000A5  _PC5                               fw
+     000000A6  _PC6                               fw
+     000000A7  _PC7                               fw
+     000000A8  _EX0                               fw
+     000000A8  _IE                                fw
+     000000A9  _ET0                               fw
+     000000AA  _EP2468STAT                        fw
+     000000AA  _EX1                               fw
+     000000AB  _EP24FIFOFLGS                      fw
+     000000AB  _ET1                               fw
+     000000AC  _EP68FIFOFLGS                      fw
+     000000AC  _ES0                               fw
+     000000AD  _ET2                               fw
+     000000AE  _ES1                               fw
+     000000AF  _AUTOPTRSETUP                      fw
+     000000AF  _EA                                fw
+     000000B0  _IOD                               fw
+     000000B0  _PD0                               fw
+     000000B1  _IOE                               fw
+     000000B1  _PD1                               fw
+     000000B2  _OEA                               fw
+     000000B2  _PD2                               fw
+     000000B3  _OEB                               fw
+     000000B3  _PD3                               fw
+     000000B4  _OEC                               fw
+     000000B4  _PD4                               fw
+     000000B5  _OED                               fw
+     000000B5  _PD5                               fw
+     000000B6  _OEE                               fw
+     000000B6  _PD6                               fw
+     000000B7  _PD7                               fw
+     000000B8  _IP                                fw
+     000000B8  _PX0                               fw
+     000000B9  _PT0                               fw
+ASxxxx Linker V03.00 + NoICE + sdld,  page 5.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     000000BA  _EP01STAT                          fw
+     000000BA  _PX1                               fw
+     000000BB  _GPIFTRIG                          fw
+     000000BB  _PT1                               fw
+     000000BC  _PS0                               fw
+     000000BD  _GPIFSGLDATH                       fw
+     000000BD  _PT2                               fw
+     000000BE  _GPIFSGLDATLX                      fw
+     000000BE  _PS1                               fw
+     000000BF  _GPIFSGLDATLNOX                    fw
+     000000C0  _RI1                               fw
+     000000C0  _SCON1                             fw
+     000000C1  _SBUF1                             fw
+     000000C1  _TI1                               fw
+     000000C2  _RB81                              fw
+     000000C3  _TB81                              fw
+     000000C4  _REN1                              fw
+     000000C5  _SM21                              fw
+     000000C6  _SM11                              fw
+     000000C7  _SM01                              fw
+     000000C8  _CP_RL2                            fw
+     000000C8  _T2CON                             fw
+     000000C9  _C_T2                              fw
+     000000CA  _RCAP2L                            fw
+     000000CA  _TR2                               fw
+     000000CB  _EXEN2                             fw
+     000000CB  _RCAP2H                            fw
+     000000CC  _TCLK                              fw
+     000000CC  _TL2                               fw
+     000000CD  _RCLK                              fw
+     000000CD  _TH2                               fw
+     000000CE  _EXF2                              fw
+     000000CF  _TF2                               fw
+     000000D0  _P                                 fw
+     000000D0  _PSW                               fw
+     000000D1  _FL                                fw
+     000000D2  _OV                                fw
+     000000D3  _RS0                               fw
+     000000D4  _RS1                               fw
+     000000D5  _F0                                fw
+     000000D6  _AC                                fw
+     000000D7  _CY                                fw
+     000000D8  _EICON                             fw
+     000000DB  _INT6                              fw
+     000000DC  _RESI                              fw
+     000000DD  _ERESI                             fw
+     000000DF  _SMOD1                             fw
+     000000E0  _ACC                               fw
+     000000E8  _EIE                               fw
+     000000E8  _EUSB                              fw
+     000000E9  _EI2C                              fw
+ASxxxx Linker V03.00 + NoICE + sdld,  page 6.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     000000EA  _EIEX4                             fw
+     000000EB  _EIEX5                             fw
+     000000EC  _EIEX6                             fw
+     000000F0  _B                                 fw
+     000000F8  _EIP                               fw
+     000000F8  _PUSB                              fw
+     000000F9  _PI2C                              fw
+     000000FA  _EIPX4                             fw
+     000000FB  _EIPX5                             fw
+     000000FC  _EIPX6                             fw
+     0000E400  _GPIF_WAVE_DATA                    fw
+     0000E480  _RES_WAVEDATA_END                  fw
+     0000E50D  _GPCR2                             fw
+     0000E600  _CPUCS                             fw
+     0000E601  _IFCONFIG                          fw
+     0000E602  _PINFLAGSAB                        fw
+     0000E603  _PINFLAGSCD                        fw
+     0000E604  _FIFORESET                         fw
+     0000E605  _BREAKPT                           fw
+     0000E606  _BPADDRH                           fw
+     0000E607  _BPADDRL                           fw
+     0000E608  _UART230                           fw
+     0000E609  _FIFOPINPOLAR                      fw
+     0000E60A  _REVID                             fw
+     0000E60B  _REVCTL                            fw
+     0000E60C  _GPIFHOLDAMOUNT                    fw
+     0000E610  _EP1OUTCFG                         fw
+     0000E611  _EP1INCFG                          fw
+     0000E612  _EP2CFG                            fw
+     0000E613  _EP4CFG                            fw
+     0000E614  _EP6CFG                            fw
+     0000E615  _EP8CFG                            fw
+     0000E618  _EP2FIFOCFG                        fw
+     0000E619  _EP4FIFOCFG                        fw
+     0000E61A  _EP6FIFOCFG                        fw
+     0000E61B  _EP8FIFOCFG                        fw
+     0000E620  _EP2AUTOINLENH                     fw
+     0000E621  _EP2AUTOINLENL                     fw
+     0000E622  _EP4AUTOINLENH                     fw
+     0000E623  _EP4AUTOINLENL                     fw
+     0000E624  _EP6AUTOINLENH                     fw
+     0000E625  _EP6AUTOINLENL                     fw
+     0000E626  _EP8AUTOINLENH                     fw
+     0000E627  _EP8AUTOINLENL                     fw
+     0000E628  _ECCCFG                            fw
+     0000E629  _ECCRESET                          fw
+     0000E62A  _ECC1B0                            fw
+     0000E62B  _ECC1B1                            fw
+     0000E62C  _ECC1B2                            fw
+     0000E62D  _ECC2B0                            fw
+     0000E62E  _ECC2B1                            fw
+ASxxxx Linker V03.00 + NoICE + sdld,  page 7.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     0000E62F  _ECC2B2                            fw
+     0000E630  _EP2FIFOPFH                        fw
+     0000E631  _EP2FIFOPFL                        fw
+     0000E632  _EP4FIFOPFH                        fw
+     0000E633  _EP4FIFOPFL                        fw
+     0000E634  _EP6FIFOPFH                        fw
+     0000E635  _EP6FIFOPFL                        fw
+     0000E636  _EP8FIFOPFH                        fw
+     0000E637  _EP8FIFOPFL                        fw
+     0000E640  _EP2ISOINPKTS                      fw
+     0000E641  _EP4ISOINPKTS                      fw
+     0000E642  _EP6ISOINPKTS                      fw
+     0000E643  _EP8ISOINPKTS                      fw
+     0000E648  _INPKTEND                          fw
+     0000E649  _OUTPKTEND                         fw
+     0000E650  _EP2FIFOIE                         fw
+     0000E651  _EP2FIFOIRQ                        fw
+     0000E652  _EP4FIFOIE                         fw
+     0000E653  _EP4FIFOIRQ                        fw
+     0000E654  _EP6FIFOIE                         fw
+     0000E655  _EP6FIFOIRQ                        fw
+     0000E656  _EP8FIFOIE                         fw
+     0000E657  _EP8FIFOIRQ                        fw
+     0000E658  _IBNIE                             fw
+     0000E659  _IBNIRQ                            fw
+     0000E65A  _NAKIE                             fw
+     0000E65B  _NAKIRQ                            fw
+     0000E65C  _USBIE                             fw
+     0000E65D  _USBIRQ                            fw
+     0000E65E  _EPIE                              fw
+     0000E65F  _EPIRQ                             fw
+     0000E660  _GPIFIE                            fw
+     0000E661  _GPIFIRQ                           fw
+     0000E662  _USBERRIE                          fw
+     0000E663  _USBERRIRQ                         fw
+     0000E664  _ERRCNTLIM                         fw
+     0000E665  _CLRERRCNT                         fw
+     0000E666  _INT2IVEC                          fw
+     0000E667  _INT4IVEC                          fw
+     0000E668  _INTSETUP                          fw
+     0000E670  _PORTACFG                          fw
+     0000E671  _PORTCCFG                          fw
+     0000E672  _PORTECFG                          fw
+     0000E678  _I2CS                              fw
+     0000E679  _I2DAT                             fw
+     0000E67A  _I2CTL                             fw
+     0000E67B  _XAUTODAT1                         fw
+     0000E67C  _XAUTODAT2                         fw
+     0000E67D  _UDMACRCH                          fw
+     0000E67E  _UDMACRCL                          fw
+     0000E67F  _UDMACRCQUAL                       fw
+ASxxxx Linker V03.00 + NoICE + sdld,  page 8.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     0000E680  _USBCS                             fw
+     0000E681  _SUSPEND                           fw
+     0000E682  _WAKEUPCS                          fw
+     0000E683  _TOGCTL                            fw
+     0000E684  _USBFRAMEH                         fw
+     0000E685  _USBFRAMEL                         fw
+     0000E686  _MICROFRAME                        fw
+     0000E687  _FNADDR                            fw
+     0000E68A  _EP0BCH                            fw
+     0000E68B  _EP0BCL                            fw
+     0000E68D  _EP1OUTBC                          fw
+     0000E68F  _EP1INBC                           fw
+     0000E690  _EP2BCH                            fw
+     0000E691  _EP2BCL                            fw
+     0000E694  _EP4BCH                            fw
+     0000E695  _EP4BCL                            fw
+     0000E698  _EP6BCH                            fw
+     0000E699  _EP6BCL                            fw
+     0000E69C  _EP8BCH                            fw
+     0000E69D  _EP8BCL                            fw
+     0000E6A0  _EP0CS                             fw
+     0000E6A1  _EP1OUTCS                          fw
+     0000E6A2  _EP1INCS                           fw
+     0000E6A3  _EP2CS                             fw
+     0000E6A4  _EP4CS                             fw
+     0000E6A5  _EP6CS                             fw
+     0000E6A6  _EP8CS                             fw
+     0000E6A7  _EP2FIFOFLGS                       fw
+     0000E6A8  _EP4FIFOFLGS                       fw
+     0000E6A9  _EP6FIFOFLGS                       fw
+     0000E6AA  _EP8FIFOFLGS                       fw
+     0000E6AB  _EP2FIFOBCH                        fw
+     0000E6AC  _EP2FIFOBCL                        fw
+     0000E6AD  _EP4FIFOBCH                        fw
+     0000E6AE  _EP4FIFOBCL                        fw
+     0000E6AF  _EP6FIFOBCH                        fw
+     0000E6B0  _EP6FIFOBCL                        fw
+     0000E6B1  _EP8FIFOBCH                        fw
+     0000E6B2  _EP8FIFOBCL                        fw
+     0000E6B3  _SUDPTRH                           fw
+     0000E6B4  _SUDPTRL                           fw
+     0000E6B5  _SUDPTRCTL                         fw
+     0000E6B8  _SETUPDAT                          fw
+     0000E6C0  _GPIFWFSELECT                      fw
+     0000E6C1  _GPIFIDLECS                        fw
+     0000E6C2  _GPIFIDLECTL                       fw
+     0000E6C3  _GPIFCTLCFG                        fw
+     0000E6C4  _GPIFADRH                          fw
+     0000E6C5  _GPIFADRL                          fw
+     0000E6C6  _FLOWSTATE                         fw
+     0000E6C7  _FLOWLOGIC                         fw
+ASxxxx Linker V03.00 + NoICE + sdld,  page 9.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     0000E6C8  _FLOWEQ0CTL                        fw
+     0000E6C9  _FLOWEQ1CTL                        fw
+     0000E6CA  _FLOWHOLDOFF                       fw
+     0000E6CB  _FLOWSTB                           fw
+     0000E6CC  _FLOWSTBEDGE                       fw
+     0000E6CD  _FLOWSTBHPERIOD                    fw
+     0000E6CE  _GPIFTCB3                          fw
+     0000E6CF  _GPIFTCB2                          fw
+     0000E6D0  _GPIFTCB1                          fw
+     0000E6D1  _GPIFTCB0                          fw
+     0000E6D2  _EP2GPIFFLGSEL                     fw
+     0000E6D3  _EP2GPIFPFSTOP                     fw
+     0000E6D4  _EP2GPIFTRIG                       fw
+     0000E6DA  _EP4GPIFFLGSEL                     fw
+     0000E6DB  _EP4GPIFPFSTOP                     fw
+     0000E6DC  _EP4GPIFTRIG                       fw
+     0000E6E2  _EP6GPIFFLGSEL                     fw
+     0000E6E3  _EP6GPIFPFSTOP                     fw
+     0000E6E4  _EP6GPIFTRIG                       fw
+     0000E6EA  _EP8GPIFFLGSEL                     fw
+     0000E6EB  _EP8GPIFPFSTOP                     fw
+     0000E6EC  _EP8GPIFTRIG                       fw
+     0000E6F0  _XGPIFSGLDATH                      fw
+     0000E6F1  _XGPIFSGLDATLX                     fw
+     0000E6F2  _XGPIFSGLDATLNOX                   fw
+     0000E6F3  _GPIFREADYCFG                      fw
+     0000E6F4  _GPIFREADYSTAT                     fw
+     0000E6F5  _GPIFABORT                         fw
+     0000E6F8  _DBUG                              fw
+     0000E6F9  _TESTCFG                           fw
+     0000E6FA  _USBTEST                           fw
+     0000E6FB  _CT1                               fw
+     0000E6FC  _CT2                               fw
+     0000E6FD  _CT3                               fw
+     0000E6FE  _CT4                               fw
+     0000E740  _EP0BUF                            fw
+     0000E780  _EP1OUTBUF                         fw
+     0000E7C0  _EP1INBUF                          fw
+     0000F000  _EP2FIFOBUF                        fw
+     0000F400  _EP4FIFOBUF                        fw
+     0000F800  _EP6FIFOBUF                        fw
+     0000FC00  _EP8FIFOBUF                        fw
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 10.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+BSEG_BYTES                          00000020    00000001 =           1. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V03.00 + NoICE + sdld,  page 11.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+REG_BANK_0                          00000000    00000008 =           8. bytes (REL,OVR)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V03.00 + NoICE + sdld,  page 12.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+DSEG                                00000000    0000007D =         125. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     00000008  _GotSUD                            fw
+     00000009  _pDeviceDscr                       fw
+     0000000B  _pDeviceQualDscr                   fw
+     0000000D  _pHighSpeedConfigDscr              fw
+     0000000F  _pFullSpeedConfigDscr              fw
+     00000011  _pConfigDscr                       fw
+     00000013  _pOtherConfigDscr                  fw
+     00000015  _pStringDscr                       fw
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 13.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+SSEG                                00000021    000000DF =         223. bytes (REL,OVR)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     00000021  __start__stack                     fw
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 14.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+HOME                                00000000    00000039 =          57. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000036  __sdcc_program_startup             fw
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 15.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT0                             00000039    00000003 =           3. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000039  __sdcc_gsinit_startup              
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 16.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT2                             0000003C    0000000A =          10. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V03.00 + NoICE + sdld,  page 17.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT3                             00000046    00000022 =          34. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000046  __mcs51_genXINIT                   
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 18.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT4                             00000068    0000002A =          42. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000068  __mcs51_genRAMCLEAR                
+C:   0000006E  __mcs51_genXRAMCLEAR               
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 19.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSFINAL                             00000092    00000003 =           3. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V03.00 + NoICE + sdld,  page 20.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                00000095    000004DE =        1246. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000095  _main                              fw
+C:   000001EC  _HighSpeedCapable                  fw
+C:   000001F7  _SetupCommand                      fw
+C:   0000056B  _resume_isr                        fw
+C:   0000056F  __sdcc_external_startup            _startup
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 21.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CONST                               00000573    0000000A =          10. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000573  _EPCS_Offset_Lookup_Table          fw
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 22.
+
+Files Linked                              [ module(s) ]
+
+bulkloop.rel                              [  ]
+fw.rel                                    [  ]
+
+
+Libraries Linked                          [ object file ]
+
+/usr/local/bin/../share/sdcc/lib/small/mcs51.lib
+                                          [ crtclear.rel ]
+/usr/local/bin/../share/sdcc/lib/small/mcs51.lib
+                                          [ crtxinit.rel ]
+/usr/local/bin/../share/sdcc/lib/small/mcs51.lib
+                                          [ crtxclear.rel ]
+/usr/local/bin/../share/sdcc/lib/small/mcs51.lib
+                                          [ crtpagesfr.rel ]
+/usr/local/bin/../share/sdcc/lib/small/mcs51.lib
+                                          [ crtstart.rel ]
+/usr/local/bin/../share/sdcc/lib/small/libsdcc.lib
+                                          [ _startup.rel ]
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 23.
+
+User Base Address Definitions
+
+HOME = 0x0000
+XSEG = 0x0001
+PSEG = 0x0001
+ISEG = 0x0000
+BSEG = 0x0000
+
+
+?ASlink-Warning-Undefined Global '_DR_VendorCmnd' referenced by module 'fw'
+
+?ASlink-Warning-Undefined Global '_DR_GetInterface' referenced by module 'fw'
+
+?ASlink-Warning-Undefined Global '_FullSpeedConfigDscr' referenced by module 'fw'
+
+?ASlink-Warning-Undefined Global '_EZUSB_Discon_PARM_1' referenced by module 'fw'
+
+?ASlink-Warning-Undefined Global '_DR_ClearFeature' referenced by module 'fw'
+
+?ASlink-Warning-Undefined Global '_TD_Resume' referenced by module 'fw'
+
+?ASlink-Warning-Undefined Global '_UserDscr' referenced by module 'fw'
+
+?ASlink-Warning-Undefined Global '_DR_SetFeature' referenced by module 'fw'
+
+?ASlink-Warning-Undefined Global '_DR_GetConfiguration' referenced by module 'fw'
+
+?ASlink-Warning-Undefined Global '_DeviceQualDscr' referenced by module 'fw'
+
+?ASlink-Warning-Undefined Global '_DR_SetInterface' referenced by module 'fw'
+
+?ASlink-Warning-Undefined Global '_DR_GetDescriptor' referenced by module 'fw'
+
+?ASlink-Warning-Undefined Global '_DR_SetConfiguration' referenced by module 'fw'
+
+?ASlink-Warning-Undefined Global '_StringDscr' referenced by module 'fw'
+
+?ASlink-Warning-Undefined Global '_EZUSB_Discon' referenced by module 'fw'
+
+?ASlink-Warning-Undefined Global '_TD_Init' referenced by module 'fw'
+
+?ASlink-Warning-Undefined Global '_EZUSB_GetStringDscr' referenced by module 'fw'
+
+?ASlink-Warning-Undefined Global '_TD_Poll' referenced by module 'fw'
+
+?ASlink-Warning-Undefined Global '_EZUSB_Susp' referenced by module 'fw'
+
+?ASlink-Warning-Undefined Global '_HighSpeedConfigDscr' referenced by module 'fw'
+
+?ASlink-Warning-Undefined Global '_DR_GetStatus' referenced by module 'fw'
+
+?ASlink-Warning-Undefined Global '_TD_Suspend' referenced by module 'fw'
+
+?ASlink-Warning-Undefined Global '_EZUSB_Resume' referenced by module 'fw'
+
+?ASlink-Warning-Undefined Global '_DeviceDscr' referenced by module 'fw'
