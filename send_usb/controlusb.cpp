@@ -183,11 +183,6 @@ main(int argc,char **argv) {
 		return 3;
 	}*/
 	send_file("r1.jpg", hdev);
-	if ( rc < 0 ) {
-		cout << libusb_strerror(libusb_error(-rc)) << "write bulk to EP 2\n"; 
-		// break;
-	}
-
 	rc = libusb_release_interface(hdev,0);
 	assert(!rc);
 	libusb_close(hdev);

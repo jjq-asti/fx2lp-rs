@@ -1,0 +1,9 @@
+#C Compiles
+*.lst
+*.asm
+*.rst
+*.rel
+*.sym
+*.lk
+*.map
+*.mem
