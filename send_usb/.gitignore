@@ -7,3 +7,5 @@
 *.lk
 *.map
 *.mem
+#vscode
+.vscode
