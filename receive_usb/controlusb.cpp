@@ -3,82 +3,24 @@
 // Date: Fri Mar 30 09:54:18 2018   (C) ve3wwg@gmail.com
 ///////////////////////////////////////////////////////////////////////
 
-#include <stdio.h>
-#include <stdarg.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <errno.h>
-#include <string.h>
-#include <poll.h>
-#include <termios.h>
+#include <iostream>
+#include <fstream>
 #include <assert.h>
-
+#include <string>
 #include <libusb-1.0/libusb.h>
+
+using namespace std;
 
 static libusb_device **usb_devs = nullptr;
 static ssize_t n_devices = 0;
 
 
-class Tty {
-	struct termios	saved,
-			current;
-	bool		rawf = false;
-public:	Tty();
-	~Tty();
-	void raw_mode(bool enablef=true);
-	int getc(int timeout_ms);
-};
-
-Tty::Tty() {
-	int rc = tcgetattr(0,&saved);		// Get current serial attributes
-	assert(rc != -1);
-	current = saved;
-}
-
-Tty::~Tty() {
-	if ( rawf ) {
-		tcsetattr(0,TCSADRAIN,&saved);	// Restore original tty settings
-		rawf = true;
-	}
-}
-
-void
-Tty::raw_mode(bool enablef) {
-	if ( enablef ) {
-		cfmakeraw(&current);			// Modify for raw I/O
-		current.c_oflag |= ONLCR | OPOST;	// Translate LF as CRLF
-		tcsetattr(0,TCSADRAIN,&current);	// Set stdin for raw I/O
-		rawf = true;
-	} else	{
-		tcsetattr(0,TCSADRAIN,&saved);		// Restore tty
-	}
-}
-
-int
-Tty::getc(int timeout_ms) {
-	struct pollfd polls[1];
-	char ch;
-	int rc;
-	
-	polls[0].fd	= 0;			// Standard input
-	polls[0].events	= POLLIN;
-	polls[0].revents = 0;
-	rc = ::poll(&polls[0],1,timeout_ms);
-	assert(rc >= 0);
-	if ( rc == 0 )
-		return -1;			// No data
-	rc = ::read(0,&ch,1);
-	if ( rc <= 0 )
-		return -1;
-	return ch;				// Return char
-}
 
 //////////////////////////////////////////////////////////////////////
 // Locate USB device by vendor and product ID
 //////////////////////////////////////////////////////////////////////
 
-static libusb_device_handle *
-find_usb_device(unsigned id_vendor,unsigned id_product) {
+static libusb_device_handle *find_usb_device(unsigned id_vendor,unsigned id_product) {
 	
 	if ( !usb_devs ) {
 		libusb_init(nullptr);		// Initialize
@@ -95,8 +37,7 @@ find_usb_device(unsigned id_vendor,unsigned id_product) {
 // Close usb library
 //////////////////////////////////////////////////////////////////////
 
-static void
-close_usb() {
+static void close_usb() {
 
 	if ( usb_devs ) {
 		libusb_free_device_list(usb_devs,1);
@@ -108,14 +49,7 @@ close_usb() {
 // Perform a bulk read
 //////////////////////////////////////////////////////////////////////
 
-static int
-bulk_read(
-  libusb_device_handle *hdev,
-  unsigned char endpoint,
-  void *buffer,
-  int buflen,
-  unsigned timeout_ms
-) {
+static int bulk_read(libusb_device_handle *hdev, unsigned char endpoint, void *buffer, int buflen, unsigned timeout_ms) {
 	unsigned char *bufp = (unsigned char*)buffer;
 	int rc, xlen = 0;
 
@@ -130,14 +64,7 @@ bulk_read(
 // Perform a bulk write
 //////////////////////////////////////////////////////////////////////
 
-static int
-bulk_write(
-  libusb_device_handle *hdev,
-  unsigned char endpoint,
-  void *buffer,
-  int buflen,
-  unsigned timeout_ms
-) {
+static int bulk_write(libusb_device_handle *hdev, unsigned char endpoint, void *buffer, int buflen, unsigned timeout_ms) {
 	unsigned char *bufp = (unsigned char*)buffer;
 	int rc, xlen = 0, total = 0;
 
@@ -158,18 +85,80 @@ bulk_write(
 }
 
 //////////////////////////////////////////////////////////////////////
+// File Handlers
+//////////////////////////////////////////////////////////////////////
+
+
+static void send_file(string filename, libusb_device_handle *hdev){
+	
+	char *memblock;
+	streampos size;
+	ifstream file;
+	int rc;
+
+	file.open(filename, ios::binary | ios::ate); // pointer at the end of file
+	size = file.tellg(); // returns the address count of the end of file
+
+	if( !file.is_open() ){
+		cout << "Can't open file" << endl;
+		exit(0);
+	}
+
+	file.close();
+	int last_byte;
+	int chunk_size;
+
+	if (size > 512){
+		last_byte = size % 512;
+		chunk_size = 512;
+	}else{
+		chunk_size = size;
+	}
+
+	while ( file.good() ){
+		memblock = new char [chunk_size];
+		file.read(memblock,chunk_size); //each read will move the pointer to the next address
+		rc = bulk_write(hdev,0x02,memblock,chunk_size,10/*ms*/);
+		if ( rc < 0 ) {
+			cout << libusb_strerror(libusb_error(-rc)) << "write bulk to EP 2\n"; 
+			// break;
+		}
+	
+		//bulk_write(memblock)
+		streampos new_size = file.tellg();
+		cout << "Wrote " << new_size << "bytes" << endl;
+		int rem = (size - new_size);
+		if ((rem < chunk_size) && (rem > 0)){
+			memblock = new char [last_byte];
+			file.read(memblock, last_byte);
+			new_size = file.tellg();
+			cout << "Wrote " << new_size << "bytes" << endl;
+			rem = size - new_size;
+		}
+		if (rem == 0) break;
+	}
+}
+
+//////////////////////////////////////////////////////////////////////
+// Save File
+//////////////////////////////////////////////////////////////////////
+static void save_file(char *data_buff, streampos size){
+	ofstream file;
+
+	file.open("filename", ios::binary | ios::app);
+	file.write(data_buff, size);
+
+}
+//////////////////////////////////////////////////////////////////////
 // Main program:
 //////////////////////////////////////////////////////////////////////
 
 int
 main(int argc,char **argv) {
-	Tty tty;
-	int rc, ch;
-	char buf[513];
-	unsigned id_vendor = 0x04b4,
-		id_product = 0x4718;
+	int rc;
+	char buff[513];
+	unsigned id_vendor = 0x04b4, id_product = 0x4718;
 	libusb_device_handle *hdev;
-	unsigned state = 0b0011;
 
 	hdev = find_usb_device(id_vendor,id_product);
 	if ( !hdev ) {
@@ -182,14 +171,12 @@ main(int argc,char **argv) {
 
 	rc = libusb_claim_interface(hdev,0);
 	if ( rc != 0 ) {
-		fprintf(stderr,
-			"%s: Claiming interface 0.\n",
-			libusb_strerror(libusb_error(rc)));
+		cout << libusb_strerror(libusb_error(rc)) << "Claiming interface 0.\n";
 		libusb_close(hdev);
 		return 2;
 	}
 
-	printf("Interface claimed:\n");
+	cout << "Interface claimed:\n";
 
 /*	if ( (rc = libusb_set_interface_alt_setting(hdev,0,1)) != 0 ) {
 		fprintf(stderr,"%s: libusb_set_interface_alt_setting(h,0,1)\n",
@@ -197,49 +184,21 @@ main(int argc,char **argv) {
 		return 3;
 	}*/
 
-	tty.raw_mode();
-
-	// Main loop:
-
-	for (;;) {
-		if ( (ch = tty.getc(500)) == -1 ) {
-			// Timed out: Try to read from EP6
-			rc = bulk_read(hdev,0x86,buf,512,10/*ms*/);
-			if ( rc < 0 ) {
-				fprintf(stderr,
-					"%s: bulk_read()\n\r",
-					libusb_strerror(libusb_error(-rc)));
-				break;
-			}
-
-			assert(rc < int(sizeof buf));
-			buf[rc] = 0;
-			printf("Read %d bytes: %s\n\r",rc,buf);
-			if ( !isatty(0) )
-				break;
-		} else	{
-			if ( ch == 'q' || ch == 'Q' || ch == 0x04 /*CTRL-D*/ )
-				break;
-			if ( ch == '0' || ch == '1' ) {
-				unsigned mask = 1 << (ch & 1);
-
-				state ^= mask;
-				buf[0] = state;
-				rc = bulk_write(hdev,0x02,buf,1,10/*ms*/);
-				if ( rc < 0 ) {
-					fprintf(stderr,
-						"%s: write bulk to EP 2\n",
-						libusb_strerror(libusb_error(-rc)));
-					break;
-				}
-				printf("Wrote %d bytes: 0x%02X  (state 0x%02X)\n",
-					rc,unsigned(buf[0]),state);
-			} else	{
-				printf("Press q to quit, else 0 or 1 to toggle LED.\n");
-			}
+	while (1){
+		rc = bulk_read(hdev,0x86,buff,512,10);
+		if ( rc < 0 ) {
+			fprintf(stderr, "%s: bulk_read()\n\r", libusb_strerror(libusb_error(-rc)));
+			break;
 		}
-	}
 
+		if(rc < int(sizeof buff)){
+			return;
+		}
+		buff[rc] = 0;
+		save_file("r1_copy.jpg",rc);
+		printf("Read %d bytes: %s\n\r",rc,buff);
+	}
+	
 	rc = libusb_release_interface(hdev,0);
 	assert(!rc);
 	libusb_close(hdev);
